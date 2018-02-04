@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpModule} from '@angular/http';
+import { MatListModule, MatCardModule } from "@angular/material";
 
 import {EmployeeDataService} from "./employee-data.service";
 
@@ -16,7 +17,8 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    MatListModule, MatCardModule
   ],
   providers: [EmployeeDataService],
   bootstrap: [AppComponent]

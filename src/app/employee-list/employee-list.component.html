@@ -1,3 +1,18 @@
+<mat-card>
+  <mat-card-title>Employee List</mat-card-title>
+  <mat-list>
+    <mat-list-item *ngFor="let employee of employeeList | slice:0:100">
+      <img matListAvatar src="{{employee.employee_image}}" alt="...">
+      <h3 matLine> {{employee.first_name}} </h3>
+      
+      <mat-divider></mat-divider>
+      <p matLine>
+        <span> {{employee.hire_data | date}} </span>
+      </p>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
+
 <div *ngFor="let employee of employeeList | slice:0:100">
   <p>{{employee | json}}</p>
 </div>
