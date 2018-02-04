@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmployeeDataService } from "./employee-data.service";
+import { ScoresDataService } from "./scores-data.service";
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { EmployeeDataService } from "./employee-data.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(public employees: EmployeeDataService){}
+  constructor(public scores: ScoresDataService){}
 
   title = 'app';
 }

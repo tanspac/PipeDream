@@ -4,21 +4,21 @@ import {Http} from "@angular/http";
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import {Observable} from "rxjs/Observable";
 
-import {Employee} from "./interfaces";
+import {Score} from "./interfaces";
 
 @Injectable()
-export class EmployeeDataService{
-  private data: BehaviorSubject<Employee[]>;
+export class ScoresDataService{
+  private data: BehaviorSubject<Score[]>;
 
-  public get Observable(): Observable<Employee[]>{
+  public get Observable(): Observable<Score[]>{
     return this.data.asObservable();
   }
 
-  public set Update(value: Employee[]){
+  public set Update(value: Score[]){
     this.data.next(value);
   }
 
-  public get Snapshot(): Employee[]{
+  public get Snapshot(): Score[]{
     return this.data.getValue();
   }
   
@@ -28,8 +28,8 @@ export class EmployeeDataService{
   }
     
     private getRow(){
-       this.http.get("../assets/employees.json").toPromise().then(data => {
-         this.data.next(data.json() as Employee[]);
+       this.http.get("../assets/score_sheet.json").toPromise().then(data => {
+         this.data.next(data.json() as Score[]);
         });  
     }
 

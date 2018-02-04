@@ -1,26 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 import {HttpModule} from '@angular/http';
-import { MatListModule, MatCardModule } from "@angular/material";
-
-import {EmployeeDataService} from "./employee-data.service";
-
 
 import { AppComponent } from './app.component';
-import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { ScoreCardComponent } from './score-card/score-card.component';
+import { ScoresDataService } from "./scores-data.service";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeListComponent
+    ScoreCardComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    MatListModule, MatCardModule
+    FormsModule
   ],
-  providers: [EmployeeDataService],
+  providers: [ScoresDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

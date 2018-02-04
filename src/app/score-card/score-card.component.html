@@ -1,0 +1,22 @@
+<h1>The Oregon Top 
+  <select [(ngModel)]="filter">
+    <option selected="selected" value="10">Ten</option>
+    <option value="50">Fifty</option>
+    <option value="100">One-hundred</option>
+    <option value="200">Two-hundred</option>
+  </select>
+</h1>
+<table>
+  <tr>
+    <td></td>
+    <th>Name</th>
+    <th>Points</th>
+    <th>Rating</th>
+  </tr>
+  <tr *ngFor='let entry of scores | slice:0:filter; let i = index;'>
+    <td>{{i+1}}</td>
+    <td>{{entry.first_name}} {{entry.last_name}}</td>
+    <td>{{entry.points}}</td>
+    <td>{{entry.points}}</td>
+  </tr>
+</table>
