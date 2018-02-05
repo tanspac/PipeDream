@@ -9,16 +9,21 @@ h1{
 table{
     width: 100%;
     font-size: 20px;
+    border-collapse: collapse;
 }
 th{
     text-align: left;
-    font-size: 36px;
-    padding-left: 20px;   
+    font-size: 30px;
+    padding-left: 20px;  
 }
 th:nth-child(3){
     text-align: right;
     padding-right: 40px;
     padding-left: 0;
+}
+tr:not(:first-child):hover{
+    background-color: #00ff00;
+    color: black;
 }
 td{
     padding: 5px 20px;
