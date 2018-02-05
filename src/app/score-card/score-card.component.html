@@ -13,10 +13,11 @@
     <th>Points</th>
     <th>Rating</th>
   </tr>
-  <tr *ngFor='let entry of scores | slice:0:filter; let i = index;'>
+  <tr *ngFor='let entry of (scores | slice:0:filter )| numSort; let i = index;' (click)="showDetails(entry)">
     <td>{{i+1}}</td>
     <td>{{entry.first_name}} {{entry.last_name}}</td>
     <td>{{entry.points}}</td>
-    <td>{{entry.points}}</td>
+    <!--<td>{{getRating(entry.points)}}</td><!---->
+    <td>{{entry.points | Rating}}</td><!---->
   </tr>
 </table>

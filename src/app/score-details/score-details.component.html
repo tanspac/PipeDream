@@ -1,0 +1,15 @@
+<mat-dialog-content>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Points</th>
+      <th>Date</th>
+    </tr>
+    <tr>
+      <td>{{data.first_name}} {{data.last_name}}</td>
+      <td>{{data.points}}</td>
+      <td>{{data.date | date}}</td>
+    </tr>
+  </table>
+</mat-dialog-content>
+<button mat-button [mat-dialog-close]="true">Close</button>

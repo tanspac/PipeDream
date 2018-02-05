@@ -1,5 +1,4 @@
 h1{
-    width: 100%;
     text-align: center;
     font-size: 48px;
     border-top: 1px solid white;
@@ -12,11 +11,18 @@ table{
     font-size: 20px;
 }
 th{
-    text-align: center;
-    font-size: 36px;    
+    text-align: left;
+    font-size: 36px;
+    padding-left: 20px;   
+}
+th:nth-child(3){
+    text-align: right;
+    padding-right: 40px;
+    padding-left: 0;
 }
 td{
     padding: 5px 20px;
+    cursor: pointer;
 }
 td:first-child{
     width: 20px;
@@ -34,4 +40,8 @@ select{
     font-size: 48px;
     outline: none;
     font-family: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
 }
